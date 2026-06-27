@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 61px 634px;
+}
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 100vh;
+  width: 250px;
+  background-color: #353a40;
+  color: lightgray;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 0.5px solid gray;
+  opacity: 0.8;
+}
+.Dashboard {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.Dashboardv1 {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.Dashboardv2 {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.Dashboardv3 {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.theme {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.widgets {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.Layout {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.UI {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.mail {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.Forms {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.Tables {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.Pages {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  padding-left: 30px;
+}
+.sidebar p {
+  display: flex;
+  padding: 15px;
+  padding-left: 15px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border-bottom: 0.5px solid gray;
+  background-color: #212429;
+  color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.left {
+  display: flex;
+  gap: 40px;
+  padding-left: 20px;
+}
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+}
+.data {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: #2b3034;
+  color: white;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  .Home {
+    color: #688dc9;
+  }
+}
+.bi-bell-fill {
+  position: relative;
+  display: inline-block;
+}
+.badge {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  background: #fec10a;
+  color: black;
+  border-radius: 60%;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+.bi-chat-text{
+  position: relative;
+  display: inline-block;
+}
+.count{
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  background: #d63944;
+  color: white;
+  border-radius: 60%;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+.data p,
+h2 {
+  margin: 10px;
+  color: lightgrey;
+}
+
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+.profile img {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.container {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin-top: 50px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.box1 {
+  height: 150px;
+  background-color: #0d6efd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.box1 h3 {
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px;
+  font-weight: 700;
+}
+.box1 p {
+  color: white;
+  padding: 10px;
+}
+.Moreinfo1 {
+  background-color: #0b66eb;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.bi-cart {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 60px;
+  opacity: 0.3;
+}
+
+.box2 {
+  height: 150px;
+  background-color: #188754;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.box2 h3 {
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px;
+  font-weight: 700;
+}
+.box2 p {
+  color: white;
+  padding: 10px;
+}
+.box2 sup {
+  font-size: medium;
+}
+.Moreinfo2 {
+  background: #177d4e;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.bi-reception-4 {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 50px;
+  opacity: 0.3;
+}
+.box3 {
+  height: 150px;
+  border-radius: 10px;
+  background-color: #fec107;
+  position: relative;
+  overflow: hidden;
+}
+.box3 h3 {
+  color: black;
+  font-size: 2.2rem;
+  padding: 10px;
+  font-weight: 700;
+}
+.box3 p {
+  color: black;
+  padding: 10px;
+}
+.Moreinfo3 {
+  color: black;
+  background-color: #edb307;
+  position: absolute;
+  width: 100%;
+  padding: 8px;
+  bottom: 0;
+  text-align: center;
+}
+.bi-person-plus-fill {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 50px;
+  opacity: 0.3;
+}
+.box4 {
+  height: 150px;
+  border-radius: 10px;
+  background-color: #dc3546;
+  overflow: hidden;
+  position: relative;
+}
+.box4 h3 {
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px;
+  font-weight: 700;
+}
+.box4 p {
+  color: white;
+  padding: 10px;
+}
+.Moreinfo4 {
+  background-color: #cc313f;
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 8px;
+}
+.bi-pie-chart-fill {
+  top: 15px;
+  right: 15px;
+  opacity: 0.3;
+  position: absolute;
+  font-size: 50px;
+}
+.image {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin-top: 220px;
+  margin-bottom: 0px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.image img {
+  width: 100%;
+  height: 370px;
+  border-radius: 10px;
+ 
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <div class="logo">
+          <img
+            src="https://adminlte.io/themes/v4/assets/img/AdminLTELogo.png"
+            width="30px"
+            height="30px"
+          />
+          <span>AdminLTE 4</span>
+        </div>
+
+        <div class="Dashboard">
+          <i class="bi bi-speedometer"></i>
+          <span>Dashboard</span>
+        </div>
+        <div class="Dashboardv1">
+          <i class="bi bi-circle"></i>
+          <span>Dashboard v1</span>
+        </div>
+        <div class="Dashboardv2">
+          <i class="bi bi-circle"></i>
+          <span>Dashboard v2</span>
+        </div>
+        <div class="Dashboardv3">
+          <i class="bi bi-circle"></i>
+          <span>Dashboard v3</span>
+        </div>
+        <div class="theme">
+          <i class="bi bi-palette"></i>
+          <span>Theme Generate</span>
+        </div>
+        <div class="widgets">
+          <i class="bi bi-box-seam-fill"></i>
+          <span>Widgets</span>
+        </div>
+        <div class="Layout">
+          <i class="bi bi-clipboard-fill"></i>
+          <span>Layout Options</span>
+        </div>
+        <div class="UI">
+          <i class="bi bi-bell-fill"></i>
+          <span>UI Elements</span>
+        </div>
+        <div class="mail">
+          <i class="bi bi-envelope"></i>
+          <span>Mailbox</span>
+        </div>
+        <div class="Forms">
+          <i class="bi bi-pencil-square"></i>
+          <span>Forms</span>
+        </div>
+        <div class="Tables">
+          <i class="bi bi-table"></i>
+          <span>Tables</span>
+        </div>
+        <p>PAGES</p>
+        <div class="Pages">
+          <i class="bi bi-file-earmark-text"></i>
+          <span>Pages</span>
+        </div>
+      </div>
+      <div class="top">
+        <div class="left">
+          <div class="lines">
+            <i class="bi bi-list"></i>
+          </div>
+          <div class="preview">
+            <i class="bi bi-grid-1x2"></i>
+            <span>Live preview</span>
+          </div>
+          <div class="doc">
+            <i class="bi bi-book"></i>
+            <span>Documentation</span>
+          </div>
+        </div>
+
+        <div class="right">
+          <i class="bi bi-search"></i>
+          <i class="bi bi-chat-text"><span class="count">3</span></i>
+          <i class="bi bi-bell-fill" ><span class="badge">15</span></i>
+          <i class="bi bi-arrows-fullscreen"></i>
+          <i class="bi bi-moon-fill"></i>
+          <div class="profile">
+            <img
+              src="https://adminlte.io/themes/v4/assets/img/user2-160x160.jpg"
+            />
+            <span>Alexander Pierce</span>
+          </div>
+        </div>
+      </div>
+      <div class="data">
+        <h2>Dashboard</h2>
+        <p><span class="Home">Home</span> / Dashboard</p>
+      </div>
+      <div class="container">
+        <div class="box1">
+          <h3>150</h3>
+          <i class="bi bi-cart"></i>
+          <p>New Orders</p>
+          <div class="Moreinfo1">
+            <p>More info <i class="bi bi-link-45deg"></i></p>
+          </div>
+        </div>
+
+        <div class="box2">
+          <h3>53<sup>%</sup></h3>
+          <i class="bi bi-reception-4"></i>
+          <p>Bounce Rate</p>
+          <div class="Moreinfo2">
+            <p>More info <i class="bi bi-link-45deg"></i></p>
+          </div>
+        </div>
+
+        <div class="box3">
+          <h3>44</h3>
+          <i class="bi bi-person-plus-fill"></i>
+          <p>User Registration</p>
+          <div class="Moreinfo3">
+            More info <i class="bi bi-link-45deg"></i>
+          </div>
+        </div>
+
+        <div class="box4">
+          <h3>65</h3>
+          <i class="bi bi-pie-chart-fill"></i>
+          <p>Unique Visitors</p>
+          <div class="Moreinfo4">
+            More info <i class="bi bi-link-45deg"></i>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="Screenshot 2026-06-22 225117.png" />
+
+        <img src="Screenshot 2026-06-22 225624.png" />
+      </div>
+    </div>
+  </body>
+</html>
